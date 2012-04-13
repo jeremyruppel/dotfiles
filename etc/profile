@@ -1,0 +1,7 @@
+# System-wide .profile for sh(1)
+
+# git completion
+source ~/.git-completion.sh
+
+# add current git branch to PS1
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '

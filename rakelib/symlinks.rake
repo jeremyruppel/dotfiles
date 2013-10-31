@@ -1,13 +1,10 @@
 #!/usr/bin/env rake
 
-namespace :symlinks do
+LINKS = FileList[ File.expand_path( 'src/**/{*,.[a-z]*}' ) ]
 
-  LINKS = FileList[ File.expand_path( 'src/**/{*,.[a-z]*}' ) ]
-
-  desc 'Install symlinks'
-  task :install do
-    ln_sf LINKS, Dir.home
-  end
+desc 'Install symlinks to $HOME'
+task :symlinks do
+  ln_sf LINKS, Dir.home
 end
 
-task :install => :'symlinks:install'
+task :install => :symlinks

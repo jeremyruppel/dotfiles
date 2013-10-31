@@ -9,3 +9,5 @@ namespace :symlinks do
     ln_sf LINKS, Dir.home
   end
 end
+
+task :install => :'symlinks:install'

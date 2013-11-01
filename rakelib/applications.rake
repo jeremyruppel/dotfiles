@@ -1,10 +1,10 @@
 #!/usr/bin/env rake
 
-file '/Applications/TextMate.app' do
-  sh 'brew install formulae/text-mate.rb'
+desc 'Install OSX Applications'
+task :applications => :brew do
+  FileList[ 'formulae/*.rb' ].each do |formula|
+    sh 'brew', 'install', formula
+  end
+  sh 'brew', 'linkapps'
 end
-
-desc 'Install TextMate 2'
-task :textmate => '/Applications/TextMate.app'
-
-task :install => :textmate
+task :install => :applications

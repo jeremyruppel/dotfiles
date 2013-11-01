@@ -5,7 +5,7 @@ class Textmate < Formula
   version  '2.0-alpha.9489'
   homepage 'http://macromates.com/'
   sha1     '117e5fedc3deadc26a3c6d4966b3968af5225937'
-  keg_only 'TextMate is installed to /Applications'
+  keg_only 'TextMate.app is installed to /Applications'
 
   def install
     prefix.install Dir.pwd

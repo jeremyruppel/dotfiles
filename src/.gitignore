@@ -1,0 +1,5 @@
+# Ignore .DS_Store caches
+.DS_Store
+
+# Ignore logs
+*.log

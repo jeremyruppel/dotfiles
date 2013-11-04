@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Prints the current IP address of en1
+#
+ifconfig en1 | tail -r | grep inet -m 1 | cut -d ' ' -f 2

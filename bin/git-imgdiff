@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# Diffs an image with its previous version in git using imagemagick.
+#
+compare $2 $1 png:- |
+  montage -geometry +4+4 $2 - $1 png:- |
+  display -title "$1" -

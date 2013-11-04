@@ -42,7 +42,7 @@ cleandocs:
 	ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
 apps: /usr/local/bin/brew
-	brew install formulae/*.rb
+	brew install app/*.rb
 	brew linkapps
 
 cleanapps:

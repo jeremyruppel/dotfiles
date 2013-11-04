@@ -10,7 +10,14 @@ export EDITOR="$(which mate) -w"
 
 ##
 # PATH additions
-export PATH=$PATH:$DOTFILES_DIR/bin
+PATH=/usr/local/bin:$PATH
+PATH=$PATH:$DOTFILES_DIR/bin
+PATH=$PATH:/usr/local/sbin
+PATH=$PATH:/usr/local/share/npm/bin
+
+##
+# Enable rbenv shims and completion
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ##
 # Enable git completion and prompt

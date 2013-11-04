@@ -1,11 +1,22 @@
+# Global user options. Override these per-repository if desired.
 [user]
 	name = Jeremy Ruppel
 	email = jeremy.ruppel@gmail.com
+
+# Use default git colors.
 [color]
   ui = true
+
+# Git whitespace handling.
 [core]
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+# Sourced git configuration files.
+[core]
 	attributesfile = ~/.gitattributes
+  excludesfile = ~/.gitignore
+
+# Git command aliases.
 [alias]
   st = status
   ci = commit
@@ -18,5 +29,7 @@
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
   ign = ls-files -o -i --exclude-standard
+
+# Image diffs. See ~/.gitattributes and git-imgdiff(1) for more information.
 [diff "image"]
 	command = git-imgdiff

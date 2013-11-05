@@ -9,10 +9,4 @@ class Alfred < Formula
   def install
     prefix.install Dir.pwd
   end
-
-  def caveats
-    <<-EOS.undent
-    Run `brew linkapps` to link to /Applications
-    EOS
-  end
 end

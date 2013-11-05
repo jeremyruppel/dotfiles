@@ -18,8 +18,6 @@ class Textmate < Formula
   def caveats
     <<-EOS.undent
     Go to TextMate > Preferences > Terminal to install mate(1).
-
-    Run `brew linkapps` to link to /Applications
     EOS
   end
 end

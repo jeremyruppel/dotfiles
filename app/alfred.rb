@@ -8,5 +8,23 @@ class Alfred < Formula
 
   def install
     prefix.install Dir.pwd
+
+    paths = [
+    	'/Applications',
+      '/Applications/Xcode.app/Contents/Applications',
+      '/Developer/Applications',
+      '/Library/PreferencePanes',
+      '/System/Library/CoreServices/Applications',
+      '/System/Library/PreferencePanes',
+      '~/Library/Caches/Metadata',
+      '~/Library/Mobile Documents',
+      '~/Library/PreferencePanes',
+      HOMEBREW_PREFIX/'Cellar/textmate',
+      HOMEBREW_PREFIX/'Cellar/iterm'
+    ]
+    system 'defaults', 'write',
+      'com.runningwithcrayons.Alfred-Preferences',
+      'features.defaultresults.scope',
+      '(%s)' % paths.map { |s| "'#{s}'" }.join( ', ' )
   end
 end

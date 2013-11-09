@@ -47,3 +47,17 @@ apps: /usr/local/bin/brew
 
 cleanapps:
 	brew unlinkapps
+
+# ================
+# = OSX SETTINGS =
+# ================
+
+CPU=ruppel
+
+osx:
+	sudo -v
+	sudo chown -R $(shell whoami) /usr/local
+	sudo scutil --set ComputerName "${CPU}"
+	sudo scutil --set HostName "${CPU}"
+	sudo scutil --set LocalHostName "${CPU}"
+	sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "${CPU}"

@@ -51,9 +51,9 @@ apps: brew
 cleanapps:
 	brew unlinkapps
 
-#
-# RUBY
-#
+# ========
+# = RUBY =
+# ========
 
 # FIXME right now this tries to install ruby no matter what
 # Find a good way to detect if the proper ruby is already installed
@@ -68,9 +68,9 @@ ronn:
 	gem install ronn
 	rbenv rehash
 
-#
-# SSH KEYS
-#
+# ============
+# = SSH KEYS =
+# ============
 
 ~/.ssh/id_rsa.pub:
 	read email

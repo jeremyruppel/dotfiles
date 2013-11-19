@@ -3,7 +3,7 @@
 MAN = $(wildcard man/**/*.md)
 DOT = $(shell find src -type f)
 
-install: dots docs apps
+install: dots docs apps osx
 uninstall: cleandots cleandocs cleanapps
 
 # ============
@@ -39,14 +39,34 @@ cleandocs:
 # ================
 
 /usr/local/bin/brew:
-	ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+	ruby -e "$$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
-apps: /usr/local/bin/brew
+brew: /usr/local/bin/brew
+	brew doctor
+
+apps: brew
 	brew install app/*.rb
 	brew linkapps
 
 cleanapps:
 	brew unlinkapps
+
+#
+# RUBY
+#
+
+# FIXME right now this tries to install ruby no matter what
+# Find a good way to detect if the proper ruby is already installed
+# and then add this as a dependency to the ronn rule
+ruby: brew
+	brew install ruby-build
+	brew install rbenv
+	rbenv install 1.9.3-p194
+	rbenv global 1.9.3-p194
+
+ronn:
+	gem install ronn
+	rbenv rehash
 
 # ================
 # = OSX SETTINGS =

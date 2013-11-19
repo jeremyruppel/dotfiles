@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 #
-# Prints the current IP address of en1
+# Prints the current IP address of the specified network interface.
+# The network interface name may be provided as the first argument.
+# Defaults to `en0`.
 #
-ifconfig en1 | tail -r | grep inet -m 1 | cut -d ' ' -f 2
+ifconfig ${1:en0} | tail -r | grep inet -m 1 | cut -d ' ' -f 2

@@ -3,7 +3,7 @@
 MAN = $(wildcard man/**/*.md)
 DOT = $(shell find src -type f)
 
-install: dots docs apps osx
+install: dots docs apps osx ssh
 uninstall: cleandots cleandocs cleanapps
 
 # ============
@@ -68,6 +68,19 @@ ronn:
 	gem install ronn
 	rbenv rehash
 
+#
+# SSH KEYS
+#
+
+~/.ssh/id_rsa.pub:
+	read email
+	ssh-keygen -t rsa -C "$(email)"
+	ssh-add ~/.ssh/id_rsa
+	pbcopy < $@
+
+ssh: ~/.ssh/id_rsa.pub
+	open https://github.com/settings/ssh
+	
 # ================
 # = OSX SETTINGS =
 # ================

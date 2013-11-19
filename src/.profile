@@ -33,4 +33,4 @@ source ~/.git-completion.bash
 
 ##
 # Add the current branch to the prompt
-PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+PS1='[\u@$(ip) \W$(__git_ps1 " (%s)")]\$ '

@@ -1,9 +1,14 @@
 # Global TM2 settings go here
 # Reference: https://gist.github.com/dvessel/1478685
+showInvisibles = true
+spellChecking = true
+
 [ source ]
 softWrap = false
 softTabs = true
 tabSize  = 2
+showWrapColumn = true
+wrapColumn = 80
 
 [ text.html.markdown ]
 softWrap = true

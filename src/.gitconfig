@@ -29,6 +29,7 @@
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
   ign = ls-files -o -i --exclude-standard
+  unstage = reset HEAD
 
 # Image diffs. See ~/.gitattributes and git-imgdiff(1) for more information.
 [diff "image"]

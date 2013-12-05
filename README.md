@@ -11,3 +11,7 @@ Got some fixin' up to do.
 ## .gitconfig
 
 Default global git options will be symlinked to `~/.gitconfig`. Override these options (like `user.email`) on a per-project basis.
+
+## Avatar
+
+You'll probably want your avatar on your desktop: `curl -L $(boom echo me) > ~/Desktop/me.jpg`

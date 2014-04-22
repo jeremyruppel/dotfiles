@@ -10,6 +10,7 @@ export EDITOR="$(which mate) -w"
 
 ##
 # PATH additions
+PATH=$HOME/bin:$PATH
 PATH=/usr/local/bin:$PATH
 PATH=$PATH:$DOTFILES_DIR/bin
 PATH=$PATH:/usr/local/sbin

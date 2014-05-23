@@ -1,7 +1,7 @@
 # Global user options. Override these per-repository if desired.
 [user]
-	name = Jeremy Ruppel
-	email = jeremy.ruppel@gmail.com
+  name = Jeremy Ruppel
+  email = jeremy.ruppel@gmail.com
 
 # Use default git colors.
 [color]
@@ -13,7 +13,7 @@
 
 # Sourced git configuration files.
 [core]
-	attributesfile = ~/.gitattributes
+  attributesfile = ~/.gitattributes
   excludesfile = ~/.gitignore
 
 # Git command aliases.
@@ -33,4 +33,4 @@
 
 # Image diffs. See ~/.gitattributes and git-imgdiff(1) for more information.
 [diff "image"]
-	command = git-imgdiff
+  command = git-imgdiff

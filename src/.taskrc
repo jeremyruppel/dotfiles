@@ -37,3 +37,11 @@ include /usr/local/Cellar/task/2.2.0/share/doc/task/rc/holidays.en-US.rc
 alias.log=completed
 alias.whatidid=completed end.after:yesterday and end.before:now
 alias.did=add due:today end:now status:completed
+
+# User-defined attributes
+uda.ticket.type=string
+uda.ticket.label=Ticket
+
+# Default report columns
+report.next.columns=id,project,priority,due,start.active,description,ticket
+report.next.labels=ID,Proj,Pri,Due,A,Description,Ticket

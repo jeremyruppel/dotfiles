@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-
-##
+#
 # Fetches and prints the definition of the given word.
 # http://linuxcommando.blogspot.com/2007/10/dictionary-lookup-via-command-line.html
 curl dict://dict.org/d:$1

@@ -35,3 +35,7 @@ source ~/.git-completion.bash
 ##
 # Add the current branch to the prompt
 PS1='[\u@$(ip) \W$(__git_ps1 " (%s)")]\$ '
+
+##
+# Source other profiles
+test -e ~/.bash_profile && source ~/.bash_profile

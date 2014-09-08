@@ -8,4 +8,4 @@
 #   gi [lang[,lang...]]
 #   gi list
 #
-curl "http://www.gitignore.io/api/$@"
+curl "https://www.gitignore.io/api/$@"

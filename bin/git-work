@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#
+# Adds some content to `file` and commits it, noting the current branch.
+# Useful for demonstrations where you need to create meaningful commits
+# but not necessarily meaningful content.
+#
+if [[ ! -e $1 ]]; then
+  echo "Usage: git work [file]"
+  exit 1
+fi
+
+##
+# This content will be appended to the file and used as the commit message.
+export CONTENT="Work on $1 ($(git rev-parse --abbrev-ref HEAD))"
+
+##
+# Append the content to the file.
+echo "$CONTENT" >> $1
+
+##
+# Stage the file.
+git add $1
+
+##
+# Commit the file with the same commit message.
+git commit -m "$CONTENT"

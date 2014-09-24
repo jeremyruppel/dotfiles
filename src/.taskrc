@@ -16,6 +16,11 @@ data.location=~/.task
 # Settings
 active.indicator=🔥
 
+# Urgency
+urgency.age.coefficient=2.0
+urgency.due.coefficient=16.0
+urgency.priority.coefficient=4.0
+
 # Color theme (uncomment one to use)
 #include /usr/local/Cellar/task/2.2.0/share/doc/task/rc/light-16.theme
 #include /usr/local/Cellar/task/2.2.0/share/doc/task/rc/light-256.theme

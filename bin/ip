@@ -1,7 +1,31 @@
-#!/usr/bin/env bash
-#
-# Prints the current IP address of the specified network interface.
-# The network interface name may be provided as the first argument.
-# Defaults to `en0`.
-#
-ifconfig ${1:en0} | tail -r | grep inet -m 1 | cut -d ' ' -f 2
+#!/usr/bin/env node
+
+/*
+ * Prints the current IP address of the specified network interface.
+ * The network interface name may be provided as the first argument.
+ * Defaults to `en0`.
+ */
+
+var os = require('os');
+
+var key = process.argv[2] || 'en0';
+var arr = os.networkInterfaces()[key];
+
+if (!arr) {
+  return;
+}
+
+for (var i = 0; i < arr.length; i++) {
+  var obj = arr[i];
+  if (obj.family === 'IPv4') {
+    process.stdout.write(obj.address);
+
+    if (process.stdout.isTTY) {
+      process.stdout.write(os.EOL);
+    }
+
+    process.exit(0);
+  }
+}
+
+process.exit(1);

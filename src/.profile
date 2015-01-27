@@ -29,8 +29,8 @@ PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 
 ##
 # Enable git completion and prompt
-source ~/.git-prompt.sh
-source ~/.git-completion.bash
+source $(brew --prefix git)/etc/bash_completion.d/git-prompt.sh
+source $(brew --prefix git)/etc/bash_completion.d/git-completion.bash
 
 ##
 # Add the current branch to the prompt

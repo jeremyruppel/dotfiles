@@ -2,7 +2,7 @@
 
 DOT = $(shell find src -type f)
 
-install: dots osx ssh
+install: dots osx
 uninstall: cleandots
 
 # ============
@@ -17,17 +17,6 @@ dots: ${DOT:src/%=~/%}
 cleandots:
 	rm -f ${DOT:src/%=~/%}
 
-# ================
-# = OSX SETTINGS =
-# ================
-
-osx:
-	sudo -v
-	sudo scutil --set ComputerName "${USER}"
-	sudo scutil --set HostName "${USER}"
-	sudo scutil --set LocalHostName "${USER}"
-	sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "${USER}"
-
 # ============
 # = SSH KEYS =
 # ============
@@ -40,3 +29,14 @@ osx:
 
 ssh: ~/.ssh/id_rsa.pub
 	open https://github.com/settings/ssh
+
+# ================
+# = OSX SETTINGS =
+# ================
+
+osx:
+	sudo -v
+	sudo scutil --set ComputerName "${USER}"
+	sudo scutil --set HostName "${USER}"
+	sudo scutil --set LocalHostName "${USER}"
+	sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "${USER}"

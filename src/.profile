@@ -5,16 +5,21 @@
 export DOTFILES_DIR="$(dirname $(dirname $(readlink $BASH_SOURCE)))"
 
 ##
-# Use `mate` as the default EDITOR
-export EDITOR="$(which mate) -w"
-
-##
 # PATH additions
 PATH=$HOME/bin:$PATH
 PATH=/usr/local/bin:$PATH
 PATH=$PATH:$DOTFILES_DIR/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/local/share/npm/bin
+
+##
+# Set the nvm dir and export the `nvm` function
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
+##
+# Use `mate` as the default EDITOR
+if which mate > /dev/null; then export EDITOR="$(which mate) -w"; fi
 
 ##
 # Enable rbenv shims and completion

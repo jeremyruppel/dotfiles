@@ -34,7 +34,7 @@ source $(brew --prefix git)/etc/bash_completion.d/git-completion.bash
 
 ##
 # Add the current branch to the prompt
-PS1='[\u@$(ip) \W$(__git_ps1 " (%s)")]\$ '
+PS1='[\[\033[36m\]●\[\033[m\]\[\033[35m\]●\[\033[33;1m\] \w$(__git_ps1 " (%s)")\[\033[m\]]\$ '
 
 ##
 # Source other profiles

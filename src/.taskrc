@@ -22,23 +22,23 @@ urgency.due.coefficient=18.0
 urgency.priority.coefficient=2.0
 
 # Color theme (uncomment one to use)
-#include share/doc/task/rc/light-16.theme
-#include share/doc/task/rc/light-256.theme
-#include share/doc/task/rc/dark-16.theme
-#include share/doc/task/rc/dark-256.theme
-#include share/doc/task/rc/dark-red-256.theme
-#include share/doc/task/rc/dark-green-256.theme
-#include share/doc/task/rc/dark-blue-256.theme
-#include share/doc/task/rc/dark-violets-256.theme
-#include share/doc/task/rc/dark-yellow-green.theme
-#include share/doc/task/rc/dark-gray-256.theme
-include share/doc/task/rc/solarized-dark-256.theme
+#include /usr/local/opt/task/share/doc/task/rc/light-16.theme
+#include /usr/local/opt/task/share/doc/task/rc/light-256.theme
+#include /usr/local/opt/task/share/doc/task/rc/dark-16.theme
+#include /usr/local/opt/task/share/doc/task/rc/dark-256.theme
+#include /usr/local/opt/task/share/doc/task/rc/dark-red-256.theme
+#include /usr/local/opt/task/share/doc/task/rc/dark-green-256.theme
+#include /usr/local/opt/task/share/doc/task/rc/dark-blue-256.theme
+#include /usr/local/opt/task/share/doc/task/rc/dark-violets-256.theme
+#include /usr/local/opt/task/share/doc/task/rc/dark-yellow-green.theme
+#include /usr/local/opt/task/share/doc/task/rc/dark-gray-256.theme
+include /usr/local/opt/task/share/doc/task/rc/solarized-dark-256.theme
 
 # Calendar
 calendar.holidays=sparse
 
 # Holidays
-include share/doc/task/rc/holidays.en-US.rc
+include /usr/local/opt/task/share/doc/task/rc/holidays.en-US.rc
 alias.log=completed
 alias.whatidid=completed end.after:yesterday and end.before:now
 alias.did=add due:today end:now status:completed

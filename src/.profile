@@ -38,8 +38,22 @@ source $(brew --prefix git)/etc/bash_completion.d/git-prompt.sh
 source $(brew --prefix git)/etc/bash_completion.d/git-completion.bash
 
 ##
-# Add the current branch to the prompt
-PS1='[\[\033[36m\]●\[\033[m\]\[\033[35m\]●\[\033[33;1m\] \w$(__git_ps1 " (%s)")\[\033[m\]]\$ '
+# Determines which color the node version should be in the PS1.
+# By default it's green, but if there is a .nvmrc in the cwd
+# and it doesn't match our current node version, change to red
+__node_version_color () {
+  local color="32m" # green
+
+  if [[ -e .nvmrc && "$(cat .nvmrc)" != "$(node --version)" ]]; then
+    color="31m" # red
+  fi
+
+  echo $color
+}
+
+##
+# Add the current branch and node version to the prompt
+PS1='[\[\033[36m\]●\[\033[m\]\[\033[35m\]●\[\033[33;1m\] \w$(__git_ps1 " (%s)")\[\033[m\] \[\033[$(__node_version_color)\]⬢ $(node --version)\[\033[m\]]\$ '
 
 ##
 # Source other profiles

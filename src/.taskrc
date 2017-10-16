@@ -34,6 +34,9 @@ urgency.priority.coefficient=2.0
 #include /usr/local/opt/task/share/doc/task/rc/dark-gray-256.theme
 include /usr/local/opt/task/share/doc/task/rc/solarized-dark-256.theme
 
+# Theme overrides
+color.active=green
+
 # Calendar
 calendar.holidays=sparse
 

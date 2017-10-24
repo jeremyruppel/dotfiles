@@ -12,6 +12,7 @@ excludeInFileChooser = "{$excludeInFileChooser,vendor}"
 
 include = "{*,$include,.tm_properties}"
 include = "{*,$include,.babelrc}"
+include = "{*,$include,.browserslist}"
 include = "{*,$include,.editorconfig}"
 include = "{*,$include,.env}"
 include = "{*,$include,.env.example}"

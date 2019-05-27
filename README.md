@@ -2,6 +2,14 @@
 
 Got some fixin' up to do.
 
+## install
+
+Run `make install` and add this to `/etc/profile`
+
+```
+. ~/.profile
+```
+
 ## TODO
 
 + Download Xcode: https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12

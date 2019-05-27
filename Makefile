@@ -1,6 +1,6 @@
 #!/usr/bin/env make
 
-DOT = $(shell find src -type f)
+DOT = $(wildcard src/.[!.]*)
 
 install: dots osx
 uninstall: cleandots

@@ -1,14 +1,8 @@
 #!/usr/bin/env bash
 
 ##
-# Read this symlink to determine the dotfiles directory
-export DOTFILES_DIR="$(dirname $(dirname $(readlink $BASH_SOURCE)))"
-
-##
 # PATH additions
-PATH=$HOME/bin:$PATH
-PATH=/usr/local/bin:$PATH
-PATH=$PATH:$DOTFILES_DIR/bin
+PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/local/share/npm/bin
 

@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# Pushes your public key to the specified server
-#
-# Usage:
-#   ssh-push foobarbaz.myhost.corp.com
-#
-set -ex
-cat ~/.ssh/id_rsa.pub | ssh ${USER}@$1 "cat - >> .ssh/authorized_keys"

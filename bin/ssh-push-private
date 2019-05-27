@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# Pushes your public key to the specified server
-#
-# Usage:
-#   ssh-push-private foobarbaz.myhost.corp.com
-#
-set -ex
-cat ~/.ssh/id_rsa | ssh ${USER}@$1 "cat - > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa"

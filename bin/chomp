@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-#
-# Removes a trailing newline from STDIN
-#
-print STDIN.read.chomp

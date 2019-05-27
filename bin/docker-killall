@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -ex
+
+# kill all running docker containers
+docker ps -q | xargs docker kill
+
+# delete all docker containers
+docker ps -aq | xargs docker rm
+
+# delete all docker images
+docker images -q | xargs docker rmi

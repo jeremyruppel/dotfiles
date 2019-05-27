@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# omg i don't care about the response just give me all the headers
+
+curl -v -o /dev/null $@

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# delete all branches that are up to date with master, aka they've been merged
+#
+git branch --merged | grep -v master | xargs git branch --delete

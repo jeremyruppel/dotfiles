@@ -35,7 +35,10 @@ urgency.priority.coefficient=2.0
 include /usr/local/opt/task/share/doc/task/rc/solarized-dark-256.theme
 
 # Theme overrides
-color.active=green
+color.active=yellow
+color.uda.priority.H=green
+color.uda.priority.M=cyan
+color.uda.priority.L=white
 
 # Calendar
 calendar.holidays=sparse
@@ -44,7 +47,7 @@ calendar.holidays=sparse
 include /usr/local/opt/task/share/doc/task/rc/holidays.en-US.rc
 alias.log=completed
 alias.whatidid=completed end.after:yesterday and end.before:now
-alias.did=add due:today end:now status:completed
+alias.did=add end:now status:completed
 
 # User-defined attributes
 uda.jira.type=string

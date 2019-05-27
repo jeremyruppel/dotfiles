@@ -39,13 +39,17 @@ source $(brew --prefix git)/etc/bash_completion.d/git-completion.bash
 
 ##
 # Determines which color the node version should be in the PS1.
-# By default it's green, but if there is a .nvmrc in the cwd
-# and it doesn't match our current node version, change to red
+# By default it's white, but if there is a .nvmrc in the cwd
+# color it green if we're on the right version and red if not
 __node_version_color () {
-  local color="32m" # green
+  local color="37m" # white
 
-  if [[ -e .nvmrc && "$(cat .nvmrc)" != "$(node --version)" ]]; then
-    color="31m" # red
+  if [[ -e .nvmrc ]]; then
+    if [[ "$(node --version)" = "$(cat .nvmrc)"* ]]; then
+      color="32m" # green
+    else
+      color="31m" # red
+    fi
   fi
 
   echo $color

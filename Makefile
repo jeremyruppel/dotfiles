@@ -1,7 +1,5 @@
 #!/usr/bin/env make
 
-DOT = $(wildcard src/.[!.]*)
-
 install: dots osx
 uninstall: cleandots
 
@@ -9,13 +7,16 @@ uninstall: cleandots
 # = DOTFILES =
 # ============
 
-dots: ${DOT:src/%=~/%}
+SRCS = $(wildcard src/.[!.]*)
+DOTS = $(SRCS:src/%=~/%)
+
+dots: $(DOTS)
 
 ~/%: src/%
-	ln -s ${PWD}/$< $@
+	ln -s $(PWD)/$< $@
 
 cleandots:
-	rm -f ${DOT:src/%=~/%}
+	rm -f $(DOTS)
 
 # ============
 # = SSH KEYS =
@@ -36,7 +37,7 @@ ssh: ~/.ssh/id_rsa.pub
 
 osx:
 	sudo -v
-	sudo scutil --set ComputerName "${USER}"
-	sudo scutil --set HostName "${USER}"
-	sudo scutil --set LocalHostName "${USER}"
-	sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "${USER}"
+	sudo scutil --set ComputerName "$(USER)"
+	sudo scutil --set HostName "$(USER)"
+	sudo scutil --set LocalHostName "$(USER)"
+	sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$(USER)"

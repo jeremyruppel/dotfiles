@@ -4,10 +4,10 @@ Got some fixin' up to do.
 
 ## install
 
-Run `make install` and add this to `/etc/profile`
+Run `make` and add this to `/etc/profile`
 
 ```
-. ~/.profile
+. ~/profile.rc
 ```
 
 ## TODO

@@ -1,0 +1,20 @@
+# Determines which color the node version should be in the PS1.
+# By default it's white, but if there is a .nvmrc in the cwd
+# color it green if we're on the right version and red if not
+__node_version_color () {
+  local color="37m" # white
+
+  if [[ -e .nvmrc ]]; then
+    if [[ "$(node --version)" = "$(cat .nvmrc)"* ]]; then
+      color="32m" # green
+    else
+      color="31m" # red
+    fi
+  fi
+
+  echo $color
+}
+
+# Add the current branch and node version to the prompt
+# PS1='[\[\033[36m\]●\[\033[m\]\[\033[35m\]●\[\033[33;1m\] \w$(__git_ps1 " (%s)")\[\033[m\] \[\033[$(__node_version_color)\]⬢ $(node --version)\[\033[m\]]\$ '
+

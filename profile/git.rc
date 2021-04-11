@@ -1,0 +1,5 @@
+# Enable git completion and prompt
+# FIXME git-completion isn't necessary in zsh?
+source $(brew --prefix git)/etc/bash_completion.d/git-prompt.sh
+source $(brew --prefix git)/etc/bash_completion.d/git-completion.bash
+

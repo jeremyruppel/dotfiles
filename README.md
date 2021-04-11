@@ -4,10 +4,8 @@ Got some fixin' up to do.
 
 ## install
 
-Run `make` and add this to `/etc/profile`
-
 ```
-. ~/profile.rc
+$ make && <TODO install homebrew> && brew bundle
 ```
 
 ## TODO

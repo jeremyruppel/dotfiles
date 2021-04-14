@@ -1,4 +1,4 @@
-DOTS = $(addprefix ~/,.gitattributes .gitconfig .gitignore .taskrc .vimrc)
+DOTS = $(addprefix ~/,.gitattributes .gitconfig .gitignore .taskrc .vimrc .zshrc)
 
 ~: $(DOTS)
 clean: $(DOTS)
@@ -33,6 +33,6 @@ clean: cleanvim
 oh-my-zsh:
 	sh -c "$$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-clean: 
+clean:
 	rm -rf $^
- 
+

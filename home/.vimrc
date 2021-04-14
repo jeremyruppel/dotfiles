@@ -14,3 +14,10 @@ colorscheme pulumi
 highlight CursorLine term=bold cterm=bold guibg=Grey40
 highlight CursorLineNr term=bold cterm=bold guibg=Grey40
 
+" clear screen when quitting
+" au VimLeave * :!clear
+
+" commentary filetypes
+au FileType zsh setlocal commentstring=#\ %s
+au FileType vim setlocal commentstring=\"\ %s
+

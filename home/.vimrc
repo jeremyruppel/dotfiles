@@ -23,5 +23,6 @@ au BufWritePre * :%s/\s\+$//e
 
 " commentary filetypes
 au FileType zsh setlocal commentstring=#\ %s
+au FileType rc setlocal commentstring=#\ %s
 au FileType vim setlocal commentstring=\"\ %s
 

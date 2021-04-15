@@ -13,11 +13,18 @@ cleandots:
 ~: ~/.vim/pack
 
 ~/.vim/pack: vim/pack
-	mkdir -p $@
-	@ln -svF $(PWD)/$< $(@D)
+	@mkdir -p $@
+	@ln -svfF $(PWD)/$< $(@D)
+
+~: ~/.vim/ftplugin
+
+~/.vim/ftplugin: vim/ftplugin
+	@mkdir -p $@
+	@ln -svfF $(PWD)/$< $(@D)
 
 cleanvim:
 	rm ~/.vim/pack
+	rm ~/.vim/ftplugin
 
 clean: cleanvim
 

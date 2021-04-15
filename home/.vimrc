@@ -1,6 +1,9 @@
 " line numbers
 set number
 set cursorline
+" set tabstop=4
+" set shiftwidth=4
+" set expandtab
 
 " invisibles
 set list
@@ -22,11 +25,8 @@ highlight CursorLineNr term=bold cterm=bold guibg=Grey40
 " https://howchoo.com/vim/vim-how-to-remove-trailing-whitespace-on-save
 au BufWritePre * :%s/\s\+$//e
 
-" filetypes
-au FileType rc set syntax=bash
-
 " commentary filetypes
 au FileType zsh setlocal commentstring=#\ %s
 au FileType rc setlocal commentstring=#\ %s
 au FileType vim setlocal commentstring=\"\ %s
-
+au FileType make setlocal commentstring=#\ %s

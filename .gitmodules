@@ -7,3 +7,6 @@
 [submodule "vim/pack/plugin/start/vim-javascript"]
 	path = vim/pack/plugin/start/vim-javascript
 	url = git@github.com:pangloss/vim-javascript.git
+[submodule "vim/pack/plugin/start/Brewfile.vim"]
+	path = vim/pack/plugin/start/Brewfile.vim
+	url = git@github.com:bfontaine/Brewfile.vim.git

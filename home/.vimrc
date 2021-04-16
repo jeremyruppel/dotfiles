@@ -15,8 +15,9 @@ filetype plugin on
 " syntax highlighting
 syntax enable
 set background=dark
-" colorscheme pulumi
-colorscheme pablo
+
+colorscheme industry
+
 highlight CursorLine term=bold cterm=bold guibg=Grey40
 highlight CursorLineNr term=bold cterm=bold guibg=Grey40
 

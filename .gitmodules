@@ -1,6 +1,3 @@
-[submodule "vim/pack/colors/opt/pulumi"]
-	path = vim/pack/colors/opt/pulumi
-	url = git@github.com:pgavlin/pulumi.vim.git
 [submodule "vim/pack/plugin/start/vim-surround"]
 	path = vim/pack/plugin/start/vim-surround
 	url = git@github.com:tpope/vim-surround.git

@@ -4,6 +4,7 @@ set cursorline
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set autoindent
 set list
 set listchars=tab:▸\ ,eol:¬
 set colorcolumn=80

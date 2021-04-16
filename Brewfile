@@ -1,6 +1,7 @@
 brew "git"
+brew "coreutils"
 brew "nvm"
 brew "tree"
 brew "task"
 brew "awscli"
-
+brew "vivid"

@@ -15,8 +15,8 @@ filetype plugin on
 
 " syntax highlighting
 syntax enable
-set background=dark
 
+set background=dark
 colorscheme industry
 
 highlight CursorLine term=bold cterm=bold

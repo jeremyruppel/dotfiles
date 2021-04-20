@@ -6,6 +6,7 @@ brew "nvm"
 brew "tree"
 brew "task"
 brew "awscli"
+brew "mkcert"
 brew "vivid"
 
 # fonts

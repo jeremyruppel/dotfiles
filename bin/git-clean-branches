@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #
-# delete all branches that are up to date with master, aka they've been merged
+# delete all branches that are up to date with the default branch
 #
-git branch --merged | grep -v master | xargs git branch --delete
+git branch --merged | grep -v $(git config init.defaultBranch)  | xargs git branch --delete

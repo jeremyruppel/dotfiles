@@ -22,3 +22,6 @@
 [submodule "vim/pack/plugin/start/editorconfig-vim"]
 	path = vim/pack/plugin/start/editorconfig-vim
 	url = git@github.com:editorconfig/editorconfig-vim.git
+[submodule "vim/pack/plugin/start/ale"]
+	path = vim/pack/plugin/start/ale
+	url = git@github.com:dense-analysis/ale.git

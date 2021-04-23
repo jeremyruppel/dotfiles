@@ -19,3 +19,6 @@
 [submodule "vim/pack/syntax/start/Dockerfile.vim"]
 	path = vim/pack/syntax/start/Dockerfile.vim
 	url = git@github.com:ekalinin/Dockerfile.vim.git
+[submodule "vim/pack/plugin/start/editorconfig-vim"]
+	path = vim/pack/plugin/start/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git

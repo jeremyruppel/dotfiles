@@ -22,9 +22,14 @@ cleandots:
 	@mkdir -p $@
 	@ln -svfF $(PWD)/$< $(@D)
 
+~/.vim/ftdetect: vim/ftdetect
+	@mkdir -p $@
+	@ln -svfF $(PWD)/$< $(@D)
+
 cleanvim:
 	rm ~/.vim/pack
 	rm ~/.vim/ftplugin
+	rm ~/.vim/ftdetect
 
 clean: cleanvim
 

@@ -8,6 +8,8 @@ brew "task"
 brew "awscli"
 brew "mkcert"
 brew "vivid"
+brew "tmux"
+brew "jq"
 
 # fonts
 tap "homebrew/cask-fonts"

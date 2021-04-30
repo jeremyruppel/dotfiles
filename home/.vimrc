@@ -16,6 +16,9 @@ filetype plugin indent on
 
 " syntax highlighting
 syntax enable
+" use newer regex engine to speed up slow syntax highlighting
+" https://jameschambers.co.uk/vim-typescript-slow
+set re=0
 
 set background=dark
 colorscheme industry

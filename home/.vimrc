@@ -20,11 +20,16 @@ syntax enable
 " https://jameschambers.co.uk/vim-typescript-slow
 set re=0
 
+" theme
 set background=dark
-colorscheme industry
+colorscheme noctu
 
 highlight CursorLine term=bold cterm=bold
 highlight CursorLineNr term=bold cterm=bold
+
+highlight Normal ctermfg=NONE
+highlight Pmenu ctermfg=LightBlue
+highlight PmenuSel ctermfg=LightMagenta cterm=bold
 
 " remove trailing whitespace on save
 " https://howchoo.com/vim/vim-how-to-remove-trailing-whitespace-on-save
@@ -33,6 +38,13 @@ au BufWritePre * :%s/\s\+$//e
 " lightline
 set laststatus=2
 set nomodeline
-let g:lightline = {
-      \ 'colorscheme': 'material'
-      \}
+let g:lightline={}
+let g:lightline.colorscheme='16color'
+
+" coc
+" use Tab/Shift+Tab to cycle through completions
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" confirm completion with Return
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"

@@ -25,3 +25,12 @@
 [submodule "vim/pack/plugin/start/lightline.vim"]
 	path = vim/pack/plugin/start/lightline.vim
 	url = git@github.com:itchyny/lightline.vim.git
+[submodule "vim/pack/plugin/start/coc"]
+	path = vim/pack/plugin/start/coc
+	url = git@github.com:neoclide/coc.nvim.git
+[submodule "vim/pack/colors/opt/vim-dim"]
+	path = vim/pack/colors/opt/vim-dim
+	url = git@github.com:jeffkreeftmeijer/vim-dim.git
+[submodule "vim/pack/colors/opt/vim-noctu"]
+	path = vim/pack/colors/opt/vim-noctu
+	url = git@github.com:noahfrederick/vim-noctu.git

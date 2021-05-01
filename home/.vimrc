@@ -30,5 +30,9 @@ highlight CursorLineNr term=bold cterm=bold
 " https://howchoo.com/vim/vim-how-to-remove-trailing-whitespace-on-save
 au BufWritePre * :%s/\s\+$//e
 
-" commentary
-au FileType vim setlocal commentstring=\"\ %s
+" lightline
+set laststatus=2
+set nomodeline
+let g:lightline = {
+      \ 'colorscheme': 'material'
+      \}

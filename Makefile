@@ -22,6 +22,8 @@ cleandots:
 	@mkdir -p $@
 	@ln -svfF $(PWD)/$< $(@D)
 
+~: ~/.vim/ftdetect
+
 ~/.vim/ftdetect: vim/ftdetect
 	@mkdir -p $@
 	@ln -svfF $(PWD)/$< $(@D)

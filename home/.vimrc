@@ -28,8 +28,39 @@ highlight CursorLine term=bold cterm=bold
 highlight CursorLineNr term=bold cterm=bold
 
 highlight Normal ctermfg=NONE
-highlight Pmenu ctermfg=LightBlue
-highlight PmenuSel ctermfg=LightMagenta cterm=bold
+
+highlight Keyword ctermfg=7 cterm=bold
+highlight CocErrorFloat ctermfg=5
+
+highlight String ctermfg=10
+highlight Todo ctermfg=13
+highlight Pmenu ctermfg=2
+highlight PmenuSel ctermfg=13
+highlight Function ctermfg=10
+highlight Number ctermfg=13
+
+" typescript
+highlight typescriptBraces ctermfg=11
+highlight typescriptFuncName ctermfg=12
+highlight typescriptArrowFunc ctermfg=Yellow
+highlight typescriptGlobal ctermfg=3
+highlight typescriptTypeReference ctermfg=11
+highlight typescriptCall ctermfg=15
+highlight typescriptPredefinedType ctermfg=3
+highlight typescriptIdentifier ctermfg=LightCyan
+highlight typescriptNodeGlobal ctermfg=12
+highlight typescriptAccessibilityModifier ctermfg=13 cterm=bold
+highlight typescriptClassName cterm=bold
+
+" vim
+highlight vimGroup ctermfg=6
+highlight vimHiGroup ctermfg=7
+
+" print out all of the highlight groups under the cursor
+function! SynGroup()
+  let l:s = synID(line('.'), col('.'), 1)
+  echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfun
 
 " remove trailing whitespace on save
 " https://howchoo.com/vim/vim-how-to-remove-trailing-whitespace-on-save
@@ -48,3 +79,16 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " confirm completion with Return
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction

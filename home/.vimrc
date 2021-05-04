@@ -97,6 +97,7 @@ endfunction
 " https://github.com/junegunn/fzf
 " https://github.com/junegunn/fzf.vim
 " https://github.com/junegunn/fzf/blob/master/README-VIM.md
+set rtp+=/usr/local/opt/fzf
 set rtp+=/opt/homebrew/opt/fzf
 
 let g:fzf_colors =

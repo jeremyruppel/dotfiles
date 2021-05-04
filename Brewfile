@@ -10,6 +10,8 @@ brew "mkcert"
 brew "vivid"
 brew "tmux"
 brew "jq"
+brew "fzf"
+brew "bat"
 
 # fonts
 tap "homebrew/cask-fonts"

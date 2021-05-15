@@ -12,6 +12,8 @@ brew "tmux"
 brew "jq"
 brew "fzf"
 brew "bat"
+brew "fd"
+brew "ripgrep"
 
 # fonts
 tap "homebrew/cask-fonts"

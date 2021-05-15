@@ -32,6 +32,7 @@ highlight Normal ctermfg=NONE
 highlight Keyword ctermfg=7 cterm=bold
 highlight CocErrorFloat ctermfg=5
 
+highlight Boolean ctermfg=5
 highlight String ctermfg=10
 highlight Todo ctermfg=13
 highlight Pmenu ctermfg=2

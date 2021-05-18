@@ -28,6 +28,7 @@ highlight CursorLine term=bold cterm=bold
 highlight CursorLineNr term=bold cterm=bold
 
 highlight Normal ctermfg=NONE
+highlight Type ctermfg=NONE
 
 highlight Keyword ctermfg=7 cterm=bold
 highlight CocErrorFloat ctermfg=5
@@ -70,8 +71,23 @@ au BufWritePre * :%s/\s\+$//e
 " lightline
 set laststatus=2
 set nomodeline
-let g:lightline={}
-let g:lightline.colorscheme='16color'
+let g:lightline = {
+      \ 'colorscheme': '16color',
+      \ 'active': {
+      \   'left': [
+      \     [ 'mode', 'paste' ],
+      \     [ 'readonly', 'filename', 'modified' ],
+      \     [ 'coc' ]
+      \   ],
+      \   'right': [
+      \     [ 'lineinfo' ],
+      \     [ 'percent' ],
+      \     [ 'fileformat', 'fileencoding', 'filetype' ]
+      \   ]
+      \ },
+      \ 'component': {
+      \   'coc': '%{coc#status()}'
+      \ } }
 
 " coc
 " use Tab/Shift+Tab to cycle through completions

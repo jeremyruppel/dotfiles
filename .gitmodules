@@ -4,21 +4,6 @@
 [submodule "vim/pack/plugin/start/vim-surround"]
 	path = vim/pack/plugin/start/vim-surround
 	url = git@github.com:tpope/vim-surround.git
-[submodule "vim/pack/syntax/start/vim-javascript"]
-	path = vim/pack/syntax/start/vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
-[submodule "vim/pack/syntax/start/Brewfile.vim"]
-	path = vim/pack/syntax/start/Brewfile.vim
-	url = git@github.com:bfontaine/Brewfile.vim.git
-[submodule "vim/pack/syntax/start/nginx.vim"]
-	path = vim/pack/syntax/start/nginx.vim
-	url = git@github.com:chr4/nginx.vim.git
-[submodule "vim/pack/syntax/start/vim-haproxy"]
-	path = vim/pack/syntax/start/vim-haproxy
-	url = git@github.com:Joorem/vim-haproxy.git
-[submodule "vim/pack/syntax/start/Dockerfile.vim"]
-	path = vim/pack/syntax/start/Dockerfile.vim
-	url = git@github.com:ekalinin/Dockerfile.vim.git
 [submodule "vim/pack/plugin/start/editorconfig-vim"]
 	path = vim/pack/plugin/start/editorconfig-vim
 	url = git@github.com:editorconfig/editorconfig-vim.git
@@ -37,6 +22,6 @@
 [submodule "vim/pack/plugin/start/fzf.vim"]
 	path = vim/pack/plugin/start/fzf.vim
 	url = git@github.com:junegunn/fzf.vim.git
-[submodule "vim/pack/syntax/start/vim-terraform"]
-	path = vim/pack/syntax/start/vim-terraform
-	url = git@github.com:hashivim/vim-terraform.git
+[submodule "vim/pack/syntax/start/vim-polyglot"]
+	path = vim/pack/syntax/start/vim-polyglot
+	url = git@github.com:sheerun/vim-polyglot.git

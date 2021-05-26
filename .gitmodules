@@ -25,3 +25,6 @@
 [submodule "vim/pack/syntax/start/vim-polyglot"]
 	path = vim/pack/syntax/start/vim-polyglot
 	url = git@github.com:sheerun/vim-polyglot.git
+[submodule "vim/pack/colors/opt/vim-hexac"]
+	path = vim/pack/colors/opt/vim-hexac
+	url = git@github.com:mmzeeman/vim-hexac.git

@@ -1,2 +1,4 @@
 " turn text wrap on
-au BufRead,BufNewFile *.md setlocal textwidth=80
+set textwidth=80
+set linebreak
+" set wrap

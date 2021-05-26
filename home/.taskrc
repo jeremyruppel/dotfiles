@@ -24,27 +24,28 @@ urgency.priority.coefficient=2.0
 # Color theme (uncomment one to use)
 # include /opt/homebrew/opt/task/share/doc/task/rc/light-16.theme
 # include /opt/homebrew/opt/task/share/doc/task/rc/light-256.theme
-# include /opt/homebrew/opt/task/share/doc/task/rc/dark-16.theme
+include /usr/local/opt/task/share/doc/task/rc/dark-16.theme
 # include /opt/homebrew/opt/task/share/doc/task/rc/dark-256.theme
 # include /opt/homebrew/opt/task/share/doc/task/rc/dark-red-256.theme
 # include /opt/homebrew/opt/task/share/doc/task/rc/dark-green-256.theme
-include /opt/homebrew/opt/task/share/doc/task/rc/dark-blue-256.theme
+# include /opt/homebrew/opt/task/share/doc/task/rc/dark-blue-256.theme
+# include /opt/homebrew/opt/task/share/doc/task/rc/dark-blue-256.theme
 # include /opt/homebrew/opt/task/share/doc/task/rc/dark-violets-256.theme
 # include /opt/homebrew/opt/task/share/doc/task/rc/dark-yellow-green.theme
 # include /opt/homebrew/opt/task/share/doc/task/rc/dark-gray-256.theme
 # include /opt/homebrew/opt/task/share/doc/task/rc/solarized-dark-256.theme
 
 # Theme overrides
-color.active=yellow
-color.uda.priority.H=green
-color.uda.priority.M=cyan
-color.uda.priority.L=white
+color.active=green
+color.uda.priority.H=magenta
+color.uda.priority.M=white
+color.uda.priority.L=gray
 
 # Calendar
 calendar.holidays=sparse
 
 # Holidays
-include /opt/homebrew/opt/task/share/doc/task/rc/holidays.en-US.rc
+include /usr/local/opt/task/share/doc/task/rc/holidays.en-US.rc
 alias.log=completed
 alias.whatidid=completed end.after:yesterday and end.before:now
 alias.did=add end:now status:completed

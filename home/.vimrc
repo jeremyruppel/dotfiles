@@ -286,3 +286,8 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 " END fzf
+
+" BEGIN ripgrep
+set grepprg=rg\ --vimgrep
+set grepformat^=%f:%l:%c:%m
+" END ripgrep

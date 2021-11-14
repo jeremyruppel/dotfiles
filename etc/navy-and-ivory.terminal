@@ -173,7 +173,7 @@
 	AAAAAAAAAAAAAAAAAAAA0w==
 	</data>
 	<key>FontAntialias</key>
-	<false/>
+	<true/>
 	<key>ProfileCurrentVersion</key>
 	<real>2.0699999999999998</real>
 	<key>SelectionColor</key>
@@ -185,6 +185,8 @@
 	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
+	<key>TerminalType</key>
+	<string>xterm-256color</string>
 	<key>TextBoldColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
@@ -203,6 +205,8 @@
 	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
+	<key>UseBrightBold</key>
+	<true/>
 	<key>name</key>
 	<string>navy-and-ivory</string>
 	<key>type</key>

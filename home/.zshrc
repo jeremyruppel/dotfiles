@@ -81,6 +81,7 @@ plugins=(
   git
   aws
   ripgrep
+  terraform
 )
 
 source $ZSH/oh-my-zsh.sh

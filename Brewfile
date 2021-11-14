@@ -2,6 +2,7 @@
 # https://github.com/Homebrew/homebrew-bundle
 brew "git"
 brew "coreutils"
+brew "make"
 brew "nvm"
 brew "tree"
 brew "task"

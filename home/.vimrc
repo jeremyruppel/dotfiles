@@ -54,6 +54,7 @@ highlight typescriptPredefinedType ctermfg=3
 highlight typescriptIdentifier ctermfg=LightCyan
 highlight typescriptNodeGlobal ctermfg=12
 highlight typescriptAccessibilityModifier ctermfg=13 cterm=bold
+highlight typescriptOptionalMark ctermfg=11
 highlight typescriptClassName cterm=bold
 
 " vim

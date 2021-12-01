@@ -42,3 +42,27 @@
 	branch = false
 [init]
 	defaultBranch = main
+
+# delta
+# https://github.com/dandavison/delta#choosing-colors-styles
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+[interactive]
+	diffFilter = delta --color-only --features=interactive
+[delta]
+	line-numbers = true
+	; side-by-side = true
+	features = decorations
+[delta "interactive"]
+	keep-plus-minus-markers = false
+[delta "decorations"]
+	commit-decoration-style = blue ol
+	commit-style = raw
+	file-style = omit
+	header-decoration-style = green box
+	hunk-header-file-style = cyan
+	hunk-header-line-number-style = green
+	hunk-header-style = file line-number syntax

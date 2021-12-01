@@ -14,6 +14,8 @@ brew "fzf"
 brew "bat"
 brew "fd"
 brew "ripgrep"
+brew "less"
+brew "git-delta"
 
 # fonts
 tap "homebrew/cask-fonts"

@@ -28,3 +28,6 @@
 [submodule "vim/pack/colors/opt/vim-hexac"]
 	path = vim/pack/colors/opt/vim-hexac
 	url = git@github.com:mmzeeman/vim-hexac.git
+[submodule "vim/pack/plugin/start/emmet-vim"]
+	path = vim/pack/plugin/start/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git

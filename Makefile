@@ -1,4 +1,4 @@
-DOTS = .gitattributes .gitconfig .gitignore .rgignore .taskrc .tmux.conf .vimrc .zshrc
+DOTS = .gitattributes .gitconfig .gitignore .prettierrc .rgignore .taskrc .tmux.conf .vimrc .zshrc
 
 ~: dots
 

@@ -294,3 +294,8 @@ let g:fzf_colors =
 set grepprg=rg\ --vimgrep
 set grepformat^=%f:%l:%c:%m
 " END ripgrep
+
+" BEGIN copilot
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+" END copilot

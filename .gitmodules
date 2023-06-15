@@ -31,3 +31,6 @@
 [submodule "vim/pack/plugin/start/emmet-vim"]
 	path = vim/pack/plugin/start/emmet-vim
 	url = git@github.com:mattn/emmet-vim.git
+[submodule "vim/pack/plugin/start/copilot.vim"]
+	path = vim/pack/plugin/start/copilot.vim
+	url = git@github.com:github/copilot.vim.git

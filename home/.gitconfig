@@ -30,7 +30,10 @@
 	ls = ls-files
 	ign = ls-files -o -i --exclude-standard
 	unstage = reset HEAD
-	dif = diff -- ':!package-lock.json'
+	dif = diff -w -- ':!package-lock.json'
+	wip = ci --amend --no-edit --no-verify
+	modified = !git status --porcelain | awk '{print $2}'
+	edit = !vi $(git modified) -p
 
 # Image diffs. See ~/.gitattributes and git-imgdiff(1) for more information.
 [diff "image"]

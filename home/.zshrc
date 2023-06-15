@@ -3,7 +3,7 @@ ZSHRC="$HOME/.zshrc"
 export DOTFILES="${ZSHRC:A:h:h}"
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$DOTFILES/bin:$PATH
+export PATH=$HOME/bin:/opt/homebrew/bin:/usr/local/bin:$DOTFILES/bin:$PATH
 # PATH=$PATH:/usr/local/sbin
 # PATH=$PATH:/usr/local/share/npm/bin
 

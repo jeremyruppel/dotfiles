@@ -22,24 +22,31 @@ syntax enable
 " https://jameschambers.co.uk/vim-typescript-slow
 set re=0
 
-" theme
+" dark theme
 set background=dark
-colorscheme noctu
+colorscheme dim
 
 highlight CursorLine term=bold cterm=bold
 highlight CursorLineNr term=bold cterm=bold
+highlight ColorColumn ctermbg=3
 
 highlight Normal ctermfg=NONE
 highlight Type ctermfg=NONE
 
-highlight Keyword ctermfg=7 cterm=bold
+highlight Statement ctermfg=10 cterm=bold
+highlight Keyword ctermfg=2 cterm=bold
+highlight Constant ctermfg=12
+highlight PreProc ctermfg=9 cterm=bold
 highlight CocErrorFloat ctermfg=5
+highlight CocUnusedHighlight ctermbg=NONE ctermfg=14
+highlight CocHighlightText ctermbg=10 ctermfg=15
 
 highlight Boolean ctermfg=5
 highlight String ctermfg=10
+highlight Number ctermfg=13
 highlight Todo ctermfg=13
-highlight Pmenu ctermfg=2
-highlight PmenuSel ctermfg=13
+highlight Pmenu ctermbg=15 ctermfg=11
+highlight PmenuSel ctermfg=6
 highlight Function ctermfg=10
 highlight Number ctermfg=13
 
@@ -57,9 +64,9 @@ highlight typescriptAccessibilityModifier ctermfg=13 cterm=bold
 highlight typescriptOptionalMark ctermfg=11
 highlight typescriptClassName cterm=bold
 
-" vim
-highlight vimGroup ctermfg=6
-highlight vimHiGroup ctermfg=7
+" " vim
+" highlight vimGroup ctermfg=6
+" highlight vimHiGroup ctermfg=7
 
 " print out all of the highlight groups under the cursor
 function! SynGroup()
@@ -133,6 +140,9 @@ inoremap <silent><expr> <TAB>
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.

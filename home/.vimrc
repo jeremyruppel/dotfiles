@@ -309,3 +309,9 @@ set grepformat^=%f:%l:%c:%m
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 " END copilot
+
+" BEGIN prettier
+augroup Prettier
+  command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+augroup end
+" END prettier

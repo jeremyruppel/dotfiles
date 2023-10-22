@@ -1,5 +1,13 @@
 # dotfiles
 
 ## install
+
+```sh
+$ make && <install homebrew> && brew bundle
 ```
-$ make && <TODO install homebrew> && brew bundle
+
+## updating submodules
+
+```sh
+$ make update
+```

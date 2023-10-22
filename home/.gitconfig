@@ -71,3 +71,8 @@
 	hunk-header-file-style = cyan
 	hunk-header-line-number-style = green
 	hunk-header-style = file line-number syntax
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
